@@ -1,4 +1,5 @@
 import base64
+import hashlib
 from cryptography.hazmat.primitives.asymmetric import ec
 from cryptography.hazmat.primitives import serialization
 
@@ -42,6 +43,8 @@ def publicpem_to_public_key(pem_data):
 if __name__ == "__main__":
     # Generate key pair
     private_key, public_key = generate_ec_key_pair()
+    print("Private Key Object:", private_key)
+    print("Public Key Object:", public_key)
 
     # Serialize to PEM
     private_key_pem, public_key_pem = serialize_key_pair_to_pem(private_key, public_key)

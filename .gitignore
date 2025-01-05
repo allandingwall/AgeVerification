@@ -1,5 +1,8 @@
 # Virtual Environment
 venv/
 
+# Testing Folder
+test/
+
 # OS Files
 .DS_Store
