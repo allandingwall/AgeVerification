@@ -1,0 +1,6 @@
+# Virtual Environment
+venv/
+
+# OS Files
+.DS_Store
+src/main.py
