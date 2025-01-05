@@ -1,6 +1,5 @@
 # Anonymous Ring Signature-Based Age Verification
-
-A Python implementation of ring signatures for anonymous age verification. Inspired by [Australia's newly implemented age verification laws](https://www.aph.gov.au/Parliamentary_Business/Bills_Legislation/bd/bd2425/25bd39), this project enables proving age eligibility without revealing personal identity. It demonstrates key cryptographic concepts like anonymity and group-based verification.
+Inspired by [Australia's newly implemented age verification laws](https://www.aph.gov.au/Parliamentary_Business/Bills_Legislation/bd/bd2425/25bd39), this project aims to deliver a proof of concept for a Python-based ring signature scheme for anonymous age verification.
 
 
 ## Ring Signatures
