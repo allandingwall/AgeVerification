@@ -5,6 +5,6 @@ Inspired by [Australia's newly implemented age verification laws](https://www.ap
 ## Ring Signatures
 *Notes from [NIST - Privacy-Enhancing Cryptography](https://csrc.nist.gov/projects/pec/pec-tools)*
 
-A group or a ring signature (here jointly denoted as GRS, though having relevant distinctions), allow a party to sign a message m on behalf of a group GG of possible signatories. The signature can be verified as having been produced by a member of the group, without revealing who.
+A ring signature allows a person to sign a message on behalf of a group of possible signatories. The signature can be verified as having been produced by a member of the group, without revealing who the signer is.
 
 ![<img>(https://csrc.nist.gov/csrc/media/Projects/pec/pec-tools-figs/pec-tool-GRS.jpg)</img>](https://csrc.nist.gov/csrc/media/Projects/pec/pec-tools-figs/pec-tool-GRS.jpg)
