@@ -3,7 +3,7 @@ from cryptography.hazmat.primitives.asymmetric import rsa
 from cryptography.hazmat.primitives import serialization
 
 def generate_rsa_key_pair():
-    # Generates an elliptic curve private and public key pair.
+    # Generates an RSA private and public key pair.
     private_key = rsa.generate_private_key(
         public_exponent=65537,
         key_size=2048,
@@ -15,7 +15,7 @@ class keys:
     private_key, public_key = generate_rsa_key_pair()
 
 def serialize_key_pair_to_pem(private_key, public_key):
-    # Serializes EC key pair to PEM format
+    # Serializes RSA key pair to PEM format
     private_key_pem = private_key.private_bytes(
         encoding=serialization.Encoding.PEM,
         format=serialization.PrivateFormat.PKCS8,
