@@ -1,13 +1,18 @@
 import base64
-import hashlib
-from cryptography.hazmat.primitives.asymmetric import ec
+from cryptography.hazmat.primitives.asymmetric import rsa
 from cryptography.hazmat.primitives import serialization
 
-def generate_ec_key_pair():
+def generate_rsa_key_pair():
     # Generates an elliptic curve private and public key pair.
-    private_key = ec.generate_private_key(ec.SECP521R1())
+    private_key = rsa.generate_private_key(
+        public_exponent=65537,
+        key_size=2048,
+    )
     public_key = private_key.public_key()
     return private_key, public_key
+
+class keys:
+    private_key, public_key = generate_rsa_key_pair()
 
 def serialize_key_pair_to_pem(private_key, public_key):
     # Serializes EC key pair to PEM format
@@ -42,7 +47,7 @@ def publicpem_to_public_key(pem_data):
 
 if __name__ == "__main__":
     # Generate key pair
-    private_key, public_key = generate_ec_key_pair()
+    private_key, public_key = generate_rsa_key_pair()
     print("Private Key Object:", private_key)
     print("Public Key Object:", public_key)
 
@@ -68,3 +73,4 @@ if __name__ == "__main__":
     restored_public_key = publicpem_to_public_key(restored_public_pem)
     print("Restored Private Key Object:", restored_private_key)
     print("Restored Public Key Object:", restored_public_key)
+    
